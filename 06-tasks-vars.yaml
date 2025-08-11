@@ -1,0 +1,21 @@
+- name:
+  hosts: local
+  connection: local
+  vars:
+  # Define variables
+  COLOUR: red
+  FRUIT:  apple
+  TASTE:  sweet
+
+  tasks:
+  - name: print the infpormation # it prints the colour red
+    vars:
+      colour: green
+    ansible.builtin.debug: # print a message
+      msg: "My favourite colour is {{ COLOUR }}, my favourite fruit is {{ FRUIT }} and it tastes {{ TASTE }}."
+
+
+  - name: print the information again # it prints the colur red
+    ansible.builtin.debug: # print a message
+      msg: "My favourite colour is {{ colour }}, my favourite fruit is {{ FRUIT }} and it tastes {{ TASTE }}."
+
