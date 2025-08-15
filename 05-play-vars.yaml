@@ -2,10 +2,10 @@
   hosts: local
   connection: local
   vars:
-  # Define variables
-   A= Akash
-   B= Ansible
-   C= 10HR
+    # Define variables
+    A: Akash
+    B: Ansible
+    C: 10HR
   tasks:
   - name: print variables
     ansible.builtin.debug:
