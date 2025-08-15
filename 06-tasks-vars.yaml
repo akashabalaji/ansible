@@ -1,4 +1,4 @@
-- name:
+- name: taks with variables
   hosts: local
   connection: local
   vars:
