@@ -1,6 +1,6 @@
 - name: variables
   hosts: local
-  connectons: local
+  connecton: local
   vars:
   # Define variables
    A= Akash
