@@ -1,4 +1,4 @@
-- name: taks with variables
+- name: task with variables
   hosts: local
   connection: local
   vars:
