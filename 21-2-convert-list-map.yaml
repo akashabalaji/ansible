@@ -1,0 +1,12 @@
+- name: convert list to map
+  hosts: local
+  connevction: local
+  vars: 
+    course:
+    - {'key': 'name', 'value': 'ansible'}
+    - {'key': 'duration', 'value': '10 hrs'}
+    - {'key': 'trainer', 'value': 'AB'}
+  tasks:
+  - name: convert list to map
+    ansible.builtin.debug:
+      msg: "Course details: {{ course | items2dict }}"
