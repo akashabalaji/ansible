@@ -1,0 +1,16 @@
+- name: convert to uppercase letter and lowercase letter
+  hosts: local
+  connection: local
+  vars:
+    name: "Balaji A"
+  tasks:
+    - name: Show name in uppercase
+      ansible.builtin.debug:
+        msg: "hello,{{ name | upper }}"
+    - name: Show name in lowercase
+      ansible.builtin.debug:
+        msg: "hello,{{ name | lower }}"
+
+    - name: show name in title case
+      ansible.builtin.debug:
+        msg: "hello,{{ name | title }}"

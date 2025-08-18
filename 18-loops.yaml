@@ -9,4 +9,4 @@
     loop: 
      - nginx
      - zip
-     - python3
+     - nodejs
