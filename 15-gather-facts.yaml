@@ -1,0 +1,8 @@
+- name: Gathering facts
+  hosts: local
+  connection: local
+  tasks:
+  - name: print facts
+    ansible.builtin.debug:
+      msg: "Ansible is gathering facts about the system. Here are some details: {{ ansible_facts }}"
+    when: ansible_facts is defined # Ensure facts are gathered
