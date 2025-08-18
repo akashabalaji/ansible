@@ -1,18 +1,18 @@
-- name : ansible dat types
+- name: ansible dat types
   hosts: local
   connection: local
   vars:
-   DURATION: 120HR # this is a number
-   COURSE: DevSecOps with AWS" # this is a string
-   IS_LIVE: true # this is a boolean
-   TOOLS: # this is a list
-     - Linux
-     - Shell
-     - Ansible
-   CONCEPTS: # this is map or dictionary or object
-    CI : Jenkins
-    SCRIPTING: "shell, ansible, terraform, python"
+    DURATION: 120HR # this is a number
+    COURSE: "DevSecOps with AWS" # this is a string
+    IS_LIVE: true # this is a boolean
+    TOOLS: # this is a list
+      - Linux
+      - Shell
+      - Ansible
+    CONCEPTS: # this is map or dictionary or object
+      CI: Jenkins
+      SCRIPTING: "shell, ansible, terraform, python"
   tasks:
-  - name: print the course information
-    ansible.builtin.debug:
-      msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, is live: {{ IS_live }}, tools are: {{ TOOLS }}, concepts are: {{ CONCEPTS }}."
+    - name: print the course information
+      ansible.builtin.debug:
+        msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, is live: {{ IS_LIVE }}, tools are: {{ TOOLS }}, concepts are: {{ CONCEPTS }}"
