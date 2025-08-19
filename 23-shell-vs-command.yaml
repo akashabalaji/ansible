@@ -1,0 +1,12 @@
+- name: shell vs command
+  hosts: frontend
+  become: yes   
+  tasks:
+  - name: redirect list output a files
+    ansible.builtin.command: "ls -ltr > /tmp/output.txt"
+    ansible.builtin.shell: "ls -ltr > /tmp/output.txt"
+    register: command_result
+
+  - name: print the outcome
+    ansible.builtin.debug:
+      msg: "{{ command_result }}"
