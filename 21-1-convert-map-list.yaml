@@ -1,10 +1,11 @@
 - name: convert map to list
   hosts: local
-  connection : local
+  connection: local
   vars:
-   course:
-    name: ansible
-    duration: 12 hrs
-    trainer: AB
-  ansible.builtin.debug:
-    msg: "Course details: {{ course | dict2items }}"
+    course:
+      name: ansible
+      duration: 12 hrs
+      trainer: AB
+  tasks:
+    - ansible.builtin.debug:
+        msg: "Course details: {{ course | dict2items }}"
