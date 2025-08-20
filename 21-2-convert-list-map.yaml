@@ -1,6 +1,6 @@
 - name: convert list to map
   hosts: local
-  connevction: local
+  connection: local
   vars: 
     course:
     - {'key': 'name', 'value': 'ansible'}
