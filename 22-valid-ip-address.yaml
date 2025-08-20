@@ -7,7 +7,7 @@
   tasks:
     - name: valide ip ip_address
       ansible.builtin.debug:
-        msg: "{{ IP_address | ansible.utils.ipadd }} is a valid IP address"
+        msg: "{{ ip_address }} is {% if ip_address | ansible.utils.ipaddr %}a valid{% else %}an invalid{% endif %} IP address"
         # ip address full form is Internet Protocol address
         # to see version ansible -- version
         # pip3.9 install netaddr
