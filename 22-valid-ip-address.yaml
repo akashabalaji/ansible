@@ -11,6 +11,6 @@
         # ip address full form is Internet Protocol address
         # to see version ansible -- version
         # pip3.9 install netaddr
-        # need to install required oython module 
+        # need to install required python module 
         # If not valid IP_address= false
         
